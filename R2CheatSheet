@@ -1,0 +1,37 @@
+R2 Cheat SHEET BABY:
+NON RADARE2 COMMANDS: 
+rabin2 -I [File] #Basically Checksecs the file
+rahash2 [stuff][] #does crypto stuff. Will probably never use in my life
+
+RADARE2 COMMANDS:
+! #EXECUTE SHELL COMMANDS FROM R2 SHELL
+ie #Lists entrypoints i? for more i commands
+aaa #Analyzes all. Pretty much necessary for other commands. a? for more a options
+	fs #List flags
+	fs [flag] #env is that flag
+		f #prints current flag environment
+		iz #lists flag env for data section
+		izz #lists flag env for whole binary
+	axt [addr] #finds data references at address. Who the fuck knows what this does really. I dont tbh. ax? for more options.
+	s #seeks for fucntion or address. s? for options
+	afl #analyze funciton list. DOPE.
+	pdf #print dissabmel finction. USE: s main ; pdf
+	V #enters visual mode
+		p/P #changes visual mode screen
+		x/X #lists references for current function
+		[numbers] #jump to numbered funcitons/references
+		? #help
+		;[-]comment #remove comment or add comment
+		:command #commands
+		m<key> #marks current offset with key of your choice
+		'<key> #marks 
+		q #quit vis mode
+	VV #enter graph mode
+		hjkl #move
+		g<key> #jump to function
+		? #help
+	ahi s #sets offput to string. Not very useful so w/e
+	ood [args] #Open in debugger mode with args. Dope.
+	
+
+
